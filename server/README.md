@@ -23,3 +23,13 @@ PPS         <--->  GPIO18  +  SYNC_IN
 ```
 
 The only tricky part is the PPS connection. You need to connect it to both PINs on the base board. I created a Y-Splitter cable for that reason. Be sure the cables are the same length when possible to avoid differences in signal runtime.
+
+## Software
+```
+sudo apt update
+sudo apt install linuxptp gpsd gpsd-clients gpsd-tools chrony -y
+```
+
+After installing the required software packages you need to configure them according the config files I left here for reference.
+
+Please take a look into the systemd directory. I left some instructions there.
