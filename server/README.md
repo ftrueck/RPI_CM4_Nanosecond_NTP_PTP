@@ -1,4 +1,4 @@
-# Raspberry PI CM4 NTP server with nanosecond precission
+# Raspberry PI CM4 NTP server with nanosecond accuracy
 ## Requirements
 - Raspberry PI CM4 module ideally with EMMC memory. RAM is not very important so even the 1GB variant should work fine
 - Waveshare Raspberry Pi Compute Module 4 IO Board with PoE Feature (Type B) or any other board exposing the SYNC_IN pin of the RPI CM4
