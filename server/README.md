@@ -33,3 +33,26 @@ sudo apt install linuxptp gpsd gpsd-clients gpsd-tools chrony -y
 After installing the required software packages you need to configure them according the config files I left here for reference.
 
 Please take a look into the systemd directory. I left some instructions there.
+
+## Tuning
+```
+sudo rm /var/lib/man-db/auto-update
+sudo apt remove --purge avahi-daemon -y
+sudo apt remove --purge modemmanager -y
+
+sudo systemctl disable bluetooth.service
+sudo systemctl disable hciuart.service
+sudo apt remove --purge bluez -y
+
+sudo systemctl stop wpa_supplicant
+sudo systemctl disable wpa_supplicant
+
+sudo apt remove --purge triggerhappy -y
+
+sudo apt autoremove --purge -y
+```
+
+Find and remove other unneeded services:
+```
+sudo systemctl --type=service --state=running
+```
