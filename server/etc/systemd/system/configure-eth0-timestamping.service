@@ -1,0 +1,12 @@
+[Unit]
+Description=Configure eth0 Timestamping for PTP
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/configure_eth0_timestamping.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

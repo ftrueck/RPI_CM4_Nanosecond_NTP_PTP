@@ -1,0 +1,13 @@
+[Unit]
+Description=Synchronize Hardware Clock with PTP Interface
+After=network.target
+Before=phc2sys.service ptp4l.service
+Requires=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/phc_ctl /dev/ptp0 set
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
