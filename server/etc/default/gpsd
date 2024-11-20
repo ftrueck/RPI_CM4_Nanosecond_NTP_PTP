@@ -1,0 +1,5 @@
+START_DAEMON="true"
+GPSD_OPTIONS="-n --speed 115200"
+DEVICES="/dev/ttyAMA0 /dev/pps0"
+USBAUTO="false"
+GPSD_SOCKET="/var/run/gpsd.sock"
